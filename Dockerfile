@@ -7,7 +7,7 @@ COPY pom.xml ./
 COPY src/ ./src/
 
 # Copy the frontend build output (dist) to Spring Boot static directory
-COPY dist/ ./src/main/resources/static/
+COPY src/ ./src/main/resources/static/
 
 # Run Maven clean package, specify the goals here
 RUN mvn clean package -DskipTests
